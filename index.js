@@ -4,25 +4,47 @@ const app = express();
 const Canvas = require('discord-canvas');
 
 
-async function welcomePro(usuarioVip,celularVip,mienbrosVip,nombredelgrupoVip,linkavatarVip,linkbackgroundVip) {
-  const canvas = new Canvas.Goodbye()
+async function goodBayPro(usuarioVip,celularVip,mienbrosVip,nombredelgrupoVip,linkavatarVip,linkbackgroundVip) {
+  var canvas = new Canvas.Goodbye()
     .setUsername(usuarioVip)
     .setDiscriminator(celularVip)
     .setMemberCount(mienbrosVip)
     .setGuildName(nombredelgrupoVip)
     .setAvatar(linkavatarVip)
-    .setColor('border', '#8015EA')
-    .setColor('username-box', '#8015EA')
-    .setColor('discriminator-box', '#8015EA')
-    .setColor('message-box', '#8015EA')
-    .setColor('title', '#8015EA')
-    .setColor('avatar', '#8015EA')
+    .setColor('border', '#4169E1')
+    .setColor('username-box', '#4169E1')
+    .setColor('discriminator-box', '#4169E1')
+    .setColor('message-box', '#4169E1')
+    .setColor('title', '#4169E1')
+    .setColor('avatar', '#4169E1')
     .setBackground(linkbackgroundVip);
 
-  const image = await canvas.toAttachment();
+  var image = await canvas.toAttachment();
 
 
-  const buffer = image.toBuffer();
+  var buffer = image.toBuffer();
+  return buffer
+}
+
+async function welcomePro(usuarioVip,celularVip,mienbrosVip,nombredelgrupoVip,linkavatarVip,linkbackgroundVip) {
+  var canvas = new Canvas.Welcome()
+    .setUsername(usuarioVip)
+    .setDiscriminator(celularVip)
+    .setMemberCount(mienbrosVip)
+    .setGuildName(nombredelgrupoVip)
+    .setAvatar(linkavatarVip)
+    .setColor('border', '#4169E1')
+    .setColor('username-box', '#4169E1')
+    .setColor('discriminator-box', '#4169E1')
+    .setColor('message-box', '#4169E1')
+    .setColor('title', '#4169E1')
+    .setColor('avatar', '#4169E1')
+    .setBackground(linkbackgroundVip);
+
+  var image = await canvas.toAttachment();
+
+
+  var buffer = image.toBuffer();
   return buffer
 }
 
@@ -47,7 +69,20 @@ res.json({url : data })
     }
     })
     
-    
+app.get('/canvas/goodBayPro', async (req, res, next) => {
+    var usuarioVip = req.query.usuario;
+    var celularVip = req.query.celular
+    var mienbrosVip = req.query.mienbros;
+    var nombredelgrupoVip = req.query.nombredelgrupo;
+    var linkavatarVip = req.query.linkavatar;
+    var linkbackgroundVip = req.query.linkbackground
+    try{
+    data = await goodBayPro(usuarioVip,celularVip,mienbrosVip,nombredelgrupoVip,linkavatarVip,linkbackgroundVip);
+res.json({url : data })
+    } catch {
+    res.json("error")  
+    }
+    })    
 
 
 
