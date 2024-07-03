@@ -48,9 +48,6 @@ res.json({url : data })
     } catch {
     res.json("error")  
     }
-    } else {
-    res.json("error")  
-    }
     })
     
     
