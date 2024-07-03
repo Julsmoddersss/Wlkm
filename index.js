@@ -1,4 +1,4 @@
-const axios = require('axios');
+
 const express = require("express");
 const fetch = require('node-fetch')
 const ejs = require("ejs");
@@ -31,7 +31,7 @@ async function welcomePro(usuarioVip,celularVip,mienbrosVip,nombredelgrupoVip,li
 
 
 app.get('/', async (req, res, next) => {
-res.render("home")
+res.json("Bienvenido")
     })
     
 
