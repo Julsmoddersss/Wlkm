@@ -561,7 +561,7 @@ document.getElementById("btn-purpura").addEventListener("click", function(){
 <a class="sub-btn"><i class='far fa-check-circle'></i>Canvas<i class="fas fa-angle-right dropdown"></i></a>
 <div class="sub-menu">
                          
-<a href="/canvas/welcomePro?usuario=juls&celular=32460220392&mienbros=999&nombredelgrupo=guedelInnovation&linkavatar=https://i.postimg.cc/zGLsbZcC/55-QHEOQRQBEPTF5-LRJK57-MDEP4.jpg&linkbackground=https://i.postimg.cc/zGLsbZcC/55-QHEOQRQBEPTF5-LRJK57-MDEP4.jpg&apikey=<%= key %>" class="nav_link sublink">Welcome Pro</a>                                                                                                                                                                      
+<a href="/canvas/welcomePro?usuario=juls&celular=32460220392&mienbros=999&nombredelgrupo=guedelInnovation&linkavatar=https://i.postimg.cc/zGLsbZcC/55-QHEOQRQBEPTF5-LRJK57-MDEP4.jpg&linkbackground=https://i.postimg.cc/zGLsbZcC/55-QHEOQRQBEPTF5-LRJK57-MDEP4.jpg>" class="nav_link sublink">Welcome Pro</a>                                                                                                                                                                      
 
                                                                                     
                                                                                     
@@ -582,51 +582,7 @@ document.getElementById("btn-purpura").addEventListener("click", function(){
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js">
-</script>
-<script>
-swal({
 
-imageUrl: "https://telegra.ph/file/02db84a71ac87e95791ca.jpg",
-footer: '',
-imageHeight: 200,
-imageAlt: ':)',
-animation: true
-})
-
-</script>
-    <script type="text/javascript">
-   // alert('deseja continuar?')
-        $(document).ready(function(){
-
-          $('.sub-btn').click(function(){
-            $(this).next('.sub-menu').slideToggle();
-            $(this).find('.dropdown').toggleClass('rotate');
-          });
-
-          $('.menu-btn').click(function(){
-            $('.side-bar').addClass('active');
-            $('.menu-btn').css("visibility", "hidden");
-          });
-
-          $('.close-btn').click(function(){
-            $('.side-bar').removeClass('active');
-            $('.menu-btn').css("visibility", "visible");
-          });
-
-        });
-
-
-let contador = 1;
-
-setInterval( function(){
-    document.getElementById('slide' + contador).checked = true;
-    contador++;
-
-    if(counter > 5 ) {
-        contador = 1;
-    }
-}, 3000 );
 
 
 document.getElementById("btn-laranja").addEventListener("click", function(){
@@ -640,38 +596,5 @@ document.getElementById("btn-vermelho").addEventListener("click", function(){
 document.getElementById("btn-purpura").addEventListener("click", function(){
   document.querySelector("body").setAttribute("class","purpura");
 })
-    </script>
-        <script type="text/javascript">
-function playAudio() {
-            const audioElement = document.getElementById("music");
-            if (audioElement.paused) {
-                const savedTime = localStorage.getItem("musicTime");
-                if (savedTime !== null) {
-                    audioElement.currentTime = savedTime;
-                }
-                audioElement.play();
-            }
-        }
-
-        function saveAudioTime() {
-            const audioElement = document.getElementById("music");
-            localStorage.setItem("musicTime", audioElement.currentTime);
-        }
-
-        document.addEventListener("visibilitychange", function() {
-            const audioElement = document.getElementById("music");
-            if (document.hidden) {
-                saveAudioTime();
-                audioElement.pause();
-            } else {
-                const savedTime = localStorage.getItem("musicTime");
-                if (savedTime !== null) {
-                    audioElement.currentTime = savedTime;
-                }
-                audioElement.play();
-            }
-        });
-
-        window.addEventListener("beforeunload", saveAudioTime);
-         </script>
+    
 </body>
