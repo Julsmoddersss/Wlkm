@@ -1,9 +1,6 @@
 
 const express = require("express");
-const fetch = require('node-fetch')
-const ejs = require("ejs");
 const app = express();
-const fs = require('fs');
 const Canvas = require('discord-canvas');
 
 
