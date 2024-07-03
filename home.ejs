@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta name="google-adsense-account" content="ca-pub-7378029130859996">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7378029130859996"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
+  <link rel="stylesheet" href="style.css">
+ <meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link rel="shortcut icon" href="https://telegra.ph/file/02db84a71ac87e95791ca.jpg" type="image/x-icon" />
+
+    <audio id="music" loop>
+        <source src="https://h.top4top.io/m_3064rlr4l0.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+  <title>Api-Rest</title>
+ <style type="text/css" rel="stylesheet">
+
+  
+:root{
+            --color-white: #fff;
+            --color-dark1: rgb(39, 39, 39);
+            --color-dark2: grenn;
+            --color-dark3: black;
+            --color-dark4: #1c1c1c;
+            --color-dark5: #343434;
+            --color-purple: #b040ff;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  background-color: #1C1C1C;
+  background-size: 200% 200%;
+  animation: color 2.7s ease infinite;
+  color: white;
+}
+
+@keyframes color {
+  0% {
+    background-position: 0% 50%;
+  }
+  
+  50% {
+    background-position: 100% 50%;
+  }
+  
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.side-bar{
+  background: rgba(000,000,000 , 0.2);
+  backdrop-filter:blur(15px);
+  width: 290px;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left: -100%;
+  overflow-y: auto;
+  transition: 0.5s ease;
+  transition-property: left;
+}
+
+.side-bar.active{
+  left: 0;
+}
+
+.side-bar .menu{
+  width: 100%;
+  margin-top: 35px;
+  text-shadow: 7px 7px 7px black;
+}
+
+.side-bar .menu .item{
+  position:relative;
+  cursor:pointer;
+}
+
+.side-bar .menu .item a{
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  padding: 5px 30px;
+  line-height: 40px;
+}
+
+.side-bar .menu .item a:hover{
+  transition: 0.3s ease;
+
+}
+
+.side-bar .menu .item i{
+  margin-right: 10px;
+}
+
+.side-bar .menu .item a .dropdown{
+  background: rgba(000,000,000 , 0.0);
+  position: absolute;
+  right:0;
+  margin: 13px;
+  transition: 0.3s ;
+}
+.sub-btn{
+  text-shadow: 7px 7px 7px black;
+  background: rgba(000,000,000 , 0.0);
+}
+.side-bar .menu .item .sub-menu{
+  background: transparent;
+  display:none;
+  box-shadow: 0 0 5px white;
+  
+}
+
+.side-bar .menu .item .sub-menu a{
+  padding-left: 80px;
+  box-shadow: 0 0 5px white;
+  
+}
+
+.rotate{
+  transform: rotate(90deg);
+}
+.item{
+  box-shadow: 0 0 2px white;
+  border-radius: 9px;
+  margin: 5px;
+}
+.close-btn{
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  right: 0;
+  margin: 25px;
+  cursor: pointer;
+  
+}
+.menu-btn i{
+ 
+}
+
+.menu-btn{
+  position: absolute;
+  color: #fff;
+  font-size: 25px;
+  margin: 17px;
+  cursor:pointer;
+  
+}
+.fe img{
+  position: absolute;
+  width: 30px;
+  position: absolute;
+  margin: 15px;
+  margin-left: 90%;
+  border-radius: 50%;
+  box-shadow: 0 0 30px black;
+}
+h1{
+  text-align: center;
+  
+  margin-top: 25px;
+}
+
+.ab i{
+  border-radius: 50%;
+  text-align: center;
+  
+}
+.txt i {
+  text-align: center;
+  
+  margin-top: 25px;
+  font-size: 25px;
+  margin-left: 25px;
+  right: 1px;
+  
+}
+.tutotxt {
+  background-color: var(--color-dark3);
+  border-radius: 7px;  
+  margin: 24px;
+  box-shadow: 0 0 7px darkgray;
+  
+  }
+.fotos {
+  width: 90%;
+  border-radius: 7px;
+}
+.tutotxtt{
+  
+  margin: 7px;
+  text-align: center;
+}
+.aaaa {
+  
+  margin: 5px;
+}
+.cabeca{
+  background-color: var(--color-dark3);
+  
+  text-align: center;
+  padding: 20px;
+  box-shadow: 10px 10px 10px black;
+  box-shadow: 0 0 7px darkgray;
+}
+.final{
+  background-color: var(--color-dark3);
+  
+  margin-bottom: 0;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 10px 10px 10px black;
+  box-shadow: 0 0 7px darkgray;
+}
+
+.ft{
+  position: absolute;
+  font-size: 20px;
+  position: absolute;
+  margin: 23px;
+  margin-left: 90%;
+  
+}
+.det{
+  position: absolute;
+  font-size: 18px;
+  position: absolute;
+  margin: 22px;
+  margin-left: 79.9%;
+  
+  
+}
+ga{
+  display: none;
+  margin-top: 25px;
+  background-color: var(--color-dark3);
+}
+.suba a{
+  position: absolute;
+  font-size: 20px;
+  position: absolute;
+  margin: 19px;
+  margin-left: -720%;
+  
+  padding: 20px 43px;
+  background-color: var(--color-dark3);
+  transition: 0.5s ease;
+  transition-property: left;
+  
+}
+.suba p{
+  position: absolute;
+  font-size: 13px;
+  position: absolute;
+  margin-left: -500%;
+  
+  padding: 20px 40px;
+  background-color: var(--color-dark1);
+  box-shadow: 0 0 7px black;
+  
+}
+.fe img{
+  border: solid 1px white;
+}
+.visitas{
+  background-color: var(--color-dark3);
+  border-radius: 7px;  
+  margin: 24px;
+  box-shadow: 0 0 7px black;
+  padding: 20px 30px;
+}
+.visitas h3{
+  
+}
+.visitas img{
+  width: 25%;
+}
+
+}
+.bv{
+  
+}
+.amigo{
+  margin-top: 90%;
+}
+.menuzin {
+  
+  padding: 20px 30px;
+}
+.menuzin summary{
+  
+}
+.menuzin a{
+  text-decoration: none;
+  
+}
+details {
+  transition: 6.3s;
+}
+.sup{
+  text-align: center;
+}
+.content {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.navigation {
+  
+  display: flex;
+}
+
+.nov{
+  
+  text-align: center;
+}
+
+.bar {
+    
+    width: 20%;
+    height: 20%;
+    border: 2px solid red;
+    margin: 6px;
+    margin-top: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    transform: .5s ease;
+}
+
+.bar:hover {
+    background-color: darkred;
+    
+}
+
+input {
+  display: none;
+}
+
+.ain{
+  width: 95%;
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+
+.slide {
+    width: 20%;
+    transition: .6s;
+}
+.content .slide img {
+    width: 97%;
+    border-radius: 15px;
+}
+#slide1:checked ~ .s1 {
+    margin-left: -0%;
+} 
+
+#slide2:checked ~ .s1 {
+    margin-left: -20%;
+} 
+
+#slide3:checked ~ .s1 {
+    margin-left: -40%;
+} 
+
+#slide4:checked ~ .s1 {
+    margin-left: -60%;
+} 
+
+#slide5:checked ~ .s1 {
+    margin-left: -80%;
+}
+
+.laranja{
+    background-color: orange;
+    transition: all 0.25s ease-in-out;
+}
+.vermelho{
+    background-color: red;
+    transition: all 0.25s ease-in-out;
+}
+.purpura{
+    background-color: purple;
+    transition: all 0.25s ease-in-out;
+}
+
+.contaimer button{
+    padding: 10px 10px;
+    border-radius: 50%;
+    
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 px;
+    border: 0;
+}
+
+div.contaimer{
+    padding: 10px 20px;
+    min-width: 90vw;
+    text-align: center;
+}
+
+.laranja{
+    background-color: orange;
+    transition: all 0.25s ease-in-out;
+    color: white;
+}
+.vermelho{
+    background-color: red;
+    transition: all 0.25s ease-in-out;
+    color: white;
+}
+.purpura{
+    background-color: white;
+    transition: all 0.25s ease-in-out;
+    color: white;
+}
+
+.contaimer button{
+    padding: 10px 10px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 10px;
+}
+
+div.contaimer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 90vw;
+    text-align: center;
+}
+img{
+  width: 100%;
+}
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 13px;
+  }
+
+  .user-name {
+    font-size: 18px;
+    text-align: center;
+    color: white;
+  }
+  .footer{
+  text-align: center;
+  font-size: 12px;
+  margin: 10px;
+  color: white;
+  background: black;
+  margin: 0;
+  padding: 15px;
+  box-shadow: 0 0 3px white;
+}
+.footer a{
+  color: red;
+  text-decoration: none;
+}
+.video-container{
+margin: 10px;
+}
+.ip h3 {
+text-align: center;
+}
+      </style>
+<script>
+document.getElementById("btn-laranja").addEventListener("click", function(){
+  document.querySelector("body").setAttribute("class","laranja");
+})
+
+document.getElementById("btn-vermelho").addEventListener("click", function(){
+  document.querySelector("body").setAttribute("class","vermelho");
+})
+
+document.getElementById("btn-purpura").addEventListener("click", function(){
+  document.querySelector("body").setAttribute("class","purpura");
+  document.querySelector("div").setAttribute("class","purpura");
+})
+</script>
+</head>
+<body onclick="playAudio()">
+
+
+    <header>
+      <nav>
+        
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        
+        </div>
+
+         <div class="cabeca">
+  <p style = "color : white" class="fas fa-database"> Api-Rest </p>
+</div>
+  
+<div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+
+</div> 
+        </div>
+
+
+        <div class="fe">
+      <a href="/perfil?name=<%= usuario %>&perfil=<%= perfil %>&key=<%= key %>&saldo=<%= saldo %>&password=<%= contraseña %>">
+          <img src="<%= perfil %>">
+     </a>
+        </div>
+         <div class="tutotxt"><br>
+   <center>
+
+   <h2 style = "color : white" class="nov">Bienvenido </br> <%= usuario %></h2>
+     <br>
+ <img src="https://telegra.ph/file/02db84a71ac87e95791ca.jpg" alt="foto">
+ <p>Estamos trabajando cada día para ofrecerles un mejor servicio</br></p>
+<br><br><br>
+
+  </center>
+</div>
+        <div class="side-bar">
+          <div class="close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+            <div class="txt">
+<i class="fa fa-cog fa-spin fa-3x fa-fw"></i><i> Lista </i>
+            </div>
+<br>
+<hr>
+          <div class="menu">
+          <div class="item">
+<a class="sub-btn"><i class='far fa-check-circle'></i>Canvas<i class="fas fa-angle-right dropdown"></i></a>
+<div class="sub-menu">
+                         
+<a href="/canvas/welcomePro?usuario=juls&celular=32460220392&mienbros=999&nombredelgrupo=guedelInnovation&linkavatar=https://i.postimg.cc/zGLsbZcC/55-QHEOQRQBEPTF5-LRJK57-MDEP4.jpg&linkbackground=https://i.postimg.cc/zGLsbZcC/55-QHEOQRQBEPTF5-LRJK57-MDEP4.jpg&apikey=<%= key %>" class="nav_link sublink">Welcome Pro</a>                                                                                                                                                                      
+
+                                                                                    
+                                                                                    
+                                                                                    
+            </div>
+            </div>
+                                                  
+
+  <div class="cabeca">
+  <p style = "color : white" class="fas fa-database"> Mini-Julscito </p>
+</div>
+  
+<div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js">
+</script>
+<script>
+swal({
+
+imageUrl: "https://telegra.ph/file/02db84a71ac87e95791ca.jpg",
+footer: '',
+imageHeight: 200,
+imageAlt: ':)',
+animation: true
+})
+
+</script>
+    <script type="text/javascript">
+   // alert('deseja continuar?')
+        $(document).ready(function(){
+
+          $('.sub-btn').click(function(){
+            $(this).next('.sub-menu').slideToggle();
+            $(this).find('.dropdown').toggleClass('rotate');
+          });
+
+          $('.menu-btn').click(function(){
+            $('.side-bar').addClass('active');
+            $('.menu-btn').css("visibility", "hidden");
+          });
+
+          $('.close-btn').click(function(){
+            $('.side-bar').removeClass('active');
+            $('.menu-btn').css("visibility", "visible");
+          });
+
+        });
+
+
+let contador = 1;
+
+setInterval( function(){
+    document.getElementById('slide' + contador).checked = true;
+    contador++;
+
+    if(counter > 5 ) {
+        contador = 1;
+    }
+}, 3000 );
+
+
+document.getElementById("btn-laranja").addEventListener("click", function(){
+  document.querySelector("tut").setAttribute("class","laranja");
+})
+
+document.getElementById("btn-vermelho").addEventListener("click", function(){
+  document.querySelector("body").setAttribute("class","vermelho");
+})
+
+document.getElementById("btn-purpura").addEventListener("click", function(){
+  document.querySelector("body").setAttribute("class","purpura");
+})
+    </script>
+        <script type="text/javascript">
+function playAudio() {
+            const audioElement = document.getElementById("music");
+            if (audioElement.paused) {
+                const savedTime = localStorage.getItem("musicTime");
+                if (savedTime !== null) {
+                    audioElement.currentTime = savedTime;
+                }
+                audioElement.play();
+            }
+        }
+
+        function saveAudioTime() {
+            const audioElement = document.getElementById("music");
+            localStorage.setItem("musicTime", audioElement.currentTime);
+        }
+
+        document.addEventListener("visibilitychange", function() {
+            const audioElement = document.getElementById("music");
+            if (document.hidden) {
+                saveAudioTime();
+                audioElement.pause();
+            } else {
+                const savedTime = localStorage.getItem("musicTime");
+                if (savedTime !== null) {
+                    audioElement.currentTime = savedTime;
+                }
+                audioElement.play();
+            }
+        });
+
+        window.addEventListener("beforeunload", saveAudioTime);
+         </script>
+</body>
