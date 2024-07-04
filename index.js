@@ -2,7 +2,7 @@
 const express = require("express");
 const app = express();
 const Canvas = require('discord-canvas');
-
+const { RankCard } = require("rankcard");
 
 async function goodBayPro(usuarioVip,celularVip,mienbrosVip,nombredelgrupoVip,linkavatarVip,linkbackgroundVip) {
   var canvas = new Canvas.Goodbye()
@@ -48,6 +48,26 @@ async function welcomePro(usuarioVip,celularVip,mienbrosVip,nombredelgrupoVip,li
   return buffer
 }
 
+async function rankingPersonal(nombre,level,imagen,porcentaje,posiciontabla,levelactual,leveltotal) {
+  const rankcard = RankCard({
+      name: nombre,
+      level: level,
+      color: "auto",
+      brightness: "50", // 0 to 100
+      avatar: imagen,
+      progress: porcentaje,
+      rank: posiciontabla,
+      requiredXp: levelactual,
+      currentXp: leveltotal,
+      showXp: true,
+      shape: 'square' // circle
+})
+return  rankcard
+ }
+
+
+
+
 
 app.get('/', async (req, res, next) => {
 res.json("Bienvenido")
@@ -84,7 +104,22 @@ res.json({url : data })
     }
     })    
 
-
+    app.get('/canvas/ranking', async (req, res, next) => {
+      var usuario = req.query.usuario;
+      var level = req.query.level
+      var imagen = req.query.imagen;
+      var porcentaje = req.query.porcentaje;
+      var posiciontabla = req.query.posiciontabla;
+      var levelactual = req.query.levelactual;
+      var leveltotal = req.query.leveltotal;
+      try{
+      data = await rankingPersonal(usuario,level,imagen,porcentaje,posiciontabla,levelactual,leveltotal)
+  res.json({url : data })
+      } catch {
+      res.json("error")  
+      }
+      })    
+  
 
 
 

@@ -4,14 +4,13 @@
   "description": "Api creada desde cero",
   "main": "node index.js",
   "dependencies": {
+    "discord-canvas": "^1.5.2",
     "express": "^4.18.2",
-                    "discord-canvas": "^1.5.2"
+    "rankcard": "^1.1.7"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "node index.js"
   },
   "author": "Juls Modders",
   "license": "ISC"
 }
-
