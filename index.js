@@ -3,6 +3,21 @@ const express = require("express");
 const app = express();
 const Canvas = require('discord-canvas');
 const { RankCard } = require("rankcard");
+const { alldl } = require('rahad-all-downloader');
+
+
+
+
+
+
+async function downloadVideo(url) {
+  try {
+    const result = await alldl(url);
+    return result
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
+}
 
 async function goodBayPro(usuarioVip,celularVip,mienbrosVip,nombredelgrupoVip,linkavatarVip,linkbackgroundVip) {
   var canvas = new Canvas.Goodbye()
@@ -119,7 +134,15 @@ res.json({url : data })
       res.json("error")  
       }
       })    
-  
+      app.get('/download/descargador', async (req, res, next) => {
+        var linkDescargador = req.query.link
+        try{
+        data = await downloadVideo(linkDescargador);
+    res.json({url : data })
+        } catch {
+        res.json("error")  
+        }
+        }) 
 
 
 
