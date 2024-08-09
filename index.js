@@ -138,7 +138,7 @@ res.json({url : data })
         var linkDescargador = req.query.link
         try{
         data = await downloadVideo(linkDescargador);
-    res.json({url : data })
+    res.json({url : data.data.videoUrl })
         } catch {
         res.json("error")  
         }
